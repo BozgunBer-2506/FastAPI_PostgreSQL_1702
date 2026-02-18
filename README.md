@@ -77,9 +77,9 @@ http://localhost:8001/docs
 
 ## 📝 Environment Variables
 
-| Variable       | Description                  | Example                                      |
-| -------------- | ---------------------------- | -------------------------------------------- |
-| `DATABASE_URL` | PostgreSQL connection string | `postgresql://postgres:1234@db:5432/kursapp` |
+| Variable       | Description                  | Example                                               |
+| -------------- | ---------------------------- | ----------------------------------------------------- |
+| `DATABASE_URL` | PostgreSQL connection string | `postgresql://postgres:YOUR_PASSWORD@db:5432/kursapp` |
 
 ## ☁️ Deployment
 
