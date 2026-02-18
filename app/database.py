@@ -8,7 +8,7 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 engine = create_engine(
-    DATABASE_URL if DATABASE_URL else "postgresql://postgres:xxxxxxx@localhost:5432/kursapp"
+    DATABASE_URL if DATABASE_URL else "postgresql://postgres:253012@localhost:5432/kursapp"
 )
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
