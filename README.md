@@ -1,49 +1,90 @@
 # FastAPI Order Management System
 
-A professional REST API developed for managing users and orders, utilizing **FastAPI** and **PostgreSQL**. This project focuses on relational database management, data validation, and clean architectural patterns.
+A professional REST API for managing users and orders, built with **FastAPI** and **PostgreSQL**.
 
-## 🚀 Key Features
+## 🌐 Live Demo
 
-- **Full CRUD Operations**: Create, Read, Update, and Delete users and orders.
-- **Relational Mapping**: Orders are linked to users via Foreign Keys.
-- **Data Integrity**: Powered by Pydantic v2 for robust input/output validation.
-- **Automated Migrations**: Database schema tracking with Alembic.
-- **Persistent Storage**: Data is safely stored in a local PostgreSQL instance.
+**API Docs**: [https://fastapipostgresql1702-production.up.railway.app/docs](https://fastapipostgresql1702-production.up.railway.app/docs)
+
+## 🚀 Features
+
+- Full CRUD operations for users and orders
+- Relational mapping via Foreign Keys
+- Input/output validation with Pydantic v2
+- Database migrations with Alembic
+- Containerized with Docker for easy setup
 
 ## 🛠 Tech Stack
 
 - **Backend**: FastAPI
 - **Database**: PostgreSQL
 - **ORM**: SQLAlchemy
-- **Environment**: Python 3.10+
 - **Server**: Uvicorn
+- **Container**: Docker
+- **Cloud**: Railway
 
-## 📥 Installation
+## 📦 Requirements
 
-1. **Clone the Repository**
+- Docker & Docker Desktop
+
+## ⚡ Quick Start
+
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/BozgunBer-2506/FastAPI_PostgreSQL_1702.git
-
 cd FastAPI_PostgreSQL_1702
 ```
 
-2. **Setup Virtual Environment**
+2. **Create your `.env` file**
 
 ```bash
-python -m venv .venv
-
+cp .env.example .env
 ```
 
-### Windows
-
-```powershell
-.venv\Scripts\activate
+Edit `.env` with your own values:
 
 ```
+DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@db:5432/kursapp
+```
 
-### Linux / WSL
+3. **Start the application**
 
 ```bash
-source .venv/bin/activate
+docker-compose up --build
 ```
+
+4. **Open the API docs**
+
+```
+http://localhost:8001/docs
+```
+
+## 🗂 Project Structure
+
+```
+├── app/
+│   ├── main.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── database.py
+│   └── routers/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── .env.example
+```
+
+## 📝 Environment Variables
+
+| Variable       | Description                  | Example                                      |
+| -------------- | ---------------------------- | -------------------------------------------- |
+| `DATABASE_URL` | PostgreSQL connection string | `postgresql://postgres:1234@db:5432/kursapp` |
+
+## ☁️ Deployment
+
+This project is deployed on **Railway** with automatic deployments on every push to `main`.
+
+Environment variables are configured directly in the Railway dashboard — no `.env` file needed in production.
+
+Crafted by The_Bozgun 2026
