@@ -20,7 +20,7 @@ class Order(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     user_id = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=False)
     product_name = Column(String)
-    total = Column(Integer, nullable=False)
+    total = Column(float, nullable=False)
     
     user = relationship("User", back_populates="orders")
 
